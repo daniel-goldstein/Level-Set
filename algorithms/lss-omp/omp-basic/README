@@ -1,0 +1,23 @@
+To run simulation test do the following in the discovery cluster:
+
+In OpenMP folder:
+	make all
+	cd inputs/sample/
+	make all
+	make run
+	cd ../../scripts/
+	
+	<modify bsub.bash to use your work directories>
+
+	bsub < bsub.bash
+	
+	<wait for job to finish using bjobs>
+	<when job has finished>
+	mv *.log ../results/discovery-omp/
+
+To view results:
+	cd ../results/discovery-omp/
+
+	- Open the output images using gnome-open (need X to view them)
+	- Open output.log for execution times
+	- Check err.log to make sure no errors occured.
