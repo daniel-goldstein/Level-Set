@@ -20,8 +20,8 @@ export OMP_NUM_THREADS=32
 export OMP_NESTED=TRUE
 
 # Set block sizes to be tested
-bslist="16"
-#bslist="2 4 8 16 32"
+#bslist="16"
+bslist="2 4 8 16 32"
 #bslist="2 4 8 16 32 64 128"
 
 #############################################
@@ -128,7 +128,7 @@ do
 			#compile cuda code
 			echo "* Compiling for block size $bs"
 			cd $algfolder
-			sed -i.bak 's/define BLOCK_TILE_SIZE [0-9]\+/define BLOCK_TILE_SIZE '"$bs"'/' lib/config.h
+			sed -i.bak 's/define BLOCK_TILE_SIZE [0-9]\+/define BLOCK_TILE_SIZE '"$bs"'/' src/config.h
 			make -s clean
 			make -s all
 			cd ../../../

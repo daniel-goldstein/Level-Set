@@ -641,12 +641,13 @@ void evolveContour(
 				  gridXSize,
 					gridYSize);
 
-	int iterations = 0;
-	do {
-		iterations++;
-    //copy global variable from CPU-->GPU, run kernel, copy GPU-->CPU
-    globalFinishedVariableOnCPU[label] = 0;
-    checkCuda(cudaMemcpyAsync(gpu.globalFinishedVariable, globalFinishedVariableOnCPU, numLabels*sizeof(int), cudaMemcpyHostToDevice, stream));
+        int iterations = 0;
+        do {
+
+        	iterations++;
+        	//copy global variable from CPU-->GPU, run kernel, copy GPU-->CPU
+        	globalFinishedVariableOnCPU[label] = 0;
+        	checkCuda(cudaMemcpyAsync(&gpu.globalFinishedVariable[label], &globalFinishedVariableOnCPU[label], sizeof(int), cudaMemcpyHostToDevice, stream));
 		lssStep2<<<dimGrid, dimBlock, 0, stream>>>((signed int*) gpu.phi,
 					gpu.globalBlockIndicator,
 					gpu.globalFinishedVariable,
@@ -654,10 +655,9 @@ void evolveContour(
 					size,
 					gridXSize,
 					gridYSize);
-    checkCuda(cudaMemcpyAsync(globalFinishedVariableOnCPU, gpu.globalFinishedVariable, numLabels*sizeof(int), cudaMemcpyDeviceToHost, stream));
+    		checkCuda(cudaMemcpyAsync(&globalFinishedVariableOnCPU[label], &gpu.globalFinishedVariable[label],sizeof(int), cudaMemcpyDeviceToHost, stream));
 	} while (globalFinishedVariableOnCPU[label] && (iterations < max_iterations));
 
-	//printf("Beginning Step3\n");
 	lssStep3<<<dimGrid, dimBlock, 0, stream>>>((signed int*) gpu.phi,
 					(signed int*) gpu.phiOut,
 					label,
