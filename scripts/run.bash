@@ -40,9 +40,6 @@ echo ""
 echo -n "Algorithm you want to run: "
 read alg
 
-echo -n "Algorithm version you want to run: "
-read algver
-
 echo -n "Name for the test to run: "
 read testname
 
@@ -73,7 +70,7 @@ codes=$(ls algorithms/$alg)
 # Set tests name
 
 #Hardcoding fix to error in coins experiment for lss-omp experiment. NO IDEA!
-if [ "$algver" == lss-omp ]; then
+if [ "$alg" == lss-omp ]; then
 	tests=$(ls inputs | grep -v coins)
 else
 	tests=$(ls inputs)

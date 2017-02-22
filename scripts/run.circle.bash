@@ -20,8 +20,8 @@ export OMP_NUM_THREADS=32
 export OMP_NESTED=TRUE
 
 # Set block sizes to be tested
-bslist="16"
-#bslist="4 8 16 32"
+#bslist="16"
+bslist="4 8 16 32"
 #bslist="2 4 8 16 32 64 128"
 
 #############################################
@@ -39,9 +39,6 @@ echo ""
 
 echo -n "Algorithm you want to run: "
 read alg
-
-echo -n "Algorithm version you want to run: "
-read algver
 
 echo -n "Name for the test to run: "
 read testname
@@ -68,7 +65,7 @@ echo -n "Which circle sizes do you want to test? (256 512 ...): "
 read tests
 
 # Code Versions
-codes=$(ls algorithms/$algver)
+codes=$(ls algorithms/$alg)
 #codes=$(ls algorithms/$algver | grep -v omp) 
 #"cuda-basic cuda-basic-4 cuda-opt"
 
@@ -103,7 +100,7 @@ do
 		for code in $codes
 		do
 			#Set algorithm folder
-			algfolder="algorithms/$algver/$code"
+			algfolder="algorithms/$alg/$code"
 
 			#Remove previous results
 			rm -rf $result/$code
