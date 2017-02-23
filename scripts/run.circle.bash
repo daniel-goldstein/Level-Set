@@ -114,7 +114,7 @@ do
 				#compile cuda code
 				echo "* Compiling for block size $bs"
 				cd $algfolder
-				sed -i.bak 's/define BLOCK_TILE_SIZE [0-9]\+/define BLOCK_TILE_SIZE '"$bs"'/' lib/config.h
+				sed -i.bak 's/define BLOCK_TILE_SIZE [0-9]\+/define BLOCK_TILE_SIZE '"$bs"'/' src/config.h
 				make -s clean 
 				make -s all
 				cd ../../../
@@ -122,8 +122,8 @@ do
 				for (( i=1; i<=$iterations; i++ ))
 				do			
 					echo "* Running iteration $i"
-					if [ "$alg" == lss ]; then
-						$algfolder/$alg \
+					if [[ $alg == *"lss"* ]]; then
+						$algfolder/lss \
 						--image $imagefolder/circle-$test.intensities.pgm \
 						--labels $imagefolder/circle-$test.label-$pref.pgm \
 						--params $imagefolder/circle.params  > $result/$code/$bs-$i.log
@@ -139,8 +139,8 @@ do
 				done
 				#run profiler
 				if [ "$profiler" == Yes ]; then
-					if [ "$alg" == lss ]; then
-						nvprof --metrics all $algfolder/$alg \
+					if [[ $alg == *"lss"* ]]; then
+						nvprof --metrics all $algfolder/lss \
 						--image $imagefolder/circle-$test.intensities.pgm \
 						--labels $imagefolder/circle-$test.label-$pref.pgm \
 						--params $imagefolder/circle.params &> $result/$code/$bs.nvprof.log
