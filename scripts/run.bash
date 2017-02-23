@@ -133,8 +133,8 @@ do
 			for (( i=1; i<=$iterations; i++ ))
 			do
 				echo "* Running iteration $i"
-				if [ "$alg" == lss ]; then
-					$algfolder/$alg \
+				if [[ $alg == *"lss"* ]]; then
+					$algfolder/lss \
 					--image $imagefolder/$test.intensities.pgm \
 					--labels $imagefolder/$test.label.pgm \
 					--params $imagefolder/$test.params  > $result/$code/$bs-$i.log
@@ -150,7 +150,7 @@ do
 			done
 			#run profiler
 			if [ "$profiler" == Yes ]; then
-				if [ "$alg" == lss ]; then
+				if [[ $alg == *"lss"* ]]; then
 					nvprof --metrics all $algfolder/$alg \
 					--image $imagefolder/circle-$test.intensities.pgm \
 					--labels $imagefolder/circle-$test.label-$pref.pgm \

@@ -67,7 +67,7 @@ bs="16"
 #compile cuda code
 echo "* Compiling for block size $bs"
 cd $algfolder
-sed -i.bak 's/define BLOCK_TILE_SIZE [0-9]\+/define BLOCK_TILE_SIZE '"$bs"'/' lib/config.h
+sed -i.bak 's/define BLOCK_TILE_SIZE [0-9]\+/define BLOCK_TILE_SIZE '"$bs"'/' src/config.h
 make -s clean 
 make -s all
 cd -
