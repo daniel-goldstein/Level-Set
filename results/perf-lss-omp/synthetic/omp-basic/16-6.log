@@ -1,0 +1,24 @@
+Finished Processing files with 5 Objects in the image of size 2048x2048
+Algorithm converged in 3 iterations.
+Initializing Time: 0.119931
+Processing Time: 0.426436
+Total Time: 0.546373
+Algorithm converged in 4 iterations.
+Initializing Time: 0.102870
+Processing Time: 0.519914
+Total Time: 0.622805
+Algorithm converged in 6 iterations.
+Initializing Time: 0.117597
+Processing Time: 0.529094
+Total Time: 0.646696
+Algorithm converged in 7 iterations.
+Initializing Time: 0.155057
+Processing Time: 0.562382
+Total Time: 0.717444
+Algorithm converged in 9 iterations.
+Initializing Time: 0.109834
+Processing Time: 0.644546
+Total Time: 0.754385
+
+Total Execution Time for LSS algorithm was: 766.294754 ms
+

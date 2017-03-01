@@ -1,0 +1,8 @@
+Finished Processing files with 1 Objects in the image of size 0x0
+Allocating arrays in GPU memory.
+Running algorithm on GPU.
+Beginning evolveContour
+Kernel Execution Time: 0.126016 ms
+Total GPU Execution Time: 0.813664 ms
+target label: 255 converged in 1 iterations.
+Produccing final image file result.ppm.

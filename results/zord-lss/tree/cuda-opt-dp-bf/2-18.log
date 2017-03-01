@@ -1,0 +1,7 @@
+Finished Processing files with 1 Objects in the image of size 960x1280
+Allocating arrays in GPU memory.
+Running algorithm on GPU.
+Kernel Execution Time: 249.434937 ms
+Total GPU Execution Time: 256.030670 ms
+target label: 100 converged in 270 iterations.
+Produccing final image file result.ppm.

@@ -1,0 +1,23 @@
+Target label 100 (intensities: 40-60) converged in 487 iterations.
+Initializing Time: 0.195357
+Processing Time: 0.275159
+Total Time: 0.470520
+Target label 200 (intensities: 40-60) converged in 507 iterations.
+Initializing Time: 0.196227
+Processing Time: 0.291079
+Total Time: 0.487310
+Target label 150 (intensities: 40-60) converged in 505 iterations.
+Initializing Time: 0.192687
+Processing Time: 0.297851
+Total Time: 0.490542
+Target label 50 (intensities: 40-60) converged in 491 iterations.
+Initializing Time: 0.195347
+Processing Time: 0.298612
+Total Time: 0.493965
+Target label 250 (intensities: 90-110) converged in 256 iterations.
+Initializing Time: 0.193844
+Processing Time: 0.519101
+Total Time: 0.712949
+
+Total Execution Time for LSS algorithm was: 719.178230 ms
+

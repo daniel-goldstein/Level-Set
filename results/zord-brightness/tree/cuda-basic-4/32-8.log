@@ -1,0 +1,8 @@
+Finished Processing files with image of size 960x1280
+Running warmup
+Running Algorithm
+Allocating arrays in GPU memory.
+Running algorithm on GPU.
+Kernel Execution Time: 0.066624 ms
+Total GPU Execution Time: 1.866368 ms
+Produccing final image file result.ppm.

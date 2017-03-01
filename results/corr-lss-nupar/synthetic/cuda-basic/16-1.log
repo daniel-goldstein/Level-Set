@@ -1,0 +1,7 @@
+Target label 50 (intensities: 40-60) converged in 489 iterations.
+Target label 100 (intensities: 40-60) converged in 600 iterations.
+Target label 150 (intensities: 40-60) converged in 588 iterations.
+Target label 200 (intensities: 40-60) converged in 10000 iterations.
+Target label 250 (intensities: 90-110) converged in 10000 iterations.
+Kernel Execution Time: 21117.3 ms
+Total GPU Execution Time: 21157 ms
