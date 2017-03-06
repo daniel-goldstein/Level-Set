@@ -1,5 +1,5 @@
 # environment
-SM := 61
+SM := 35
 
 GCC := g++
 NVCC := nvcc
