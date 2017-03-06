@@ -1,0 +1,13 @@
+Test,Code,block size,Max Kernel,Min Kernel,Avg Kernel,Max GPU Time,Min GPU Time,Avg GPU Time
+scal-lss-nupar,cuda-basic,16,2740.04,2735.04,2737.28,3003.82,2793.27,2825.88
+scal-lss-nupar,cuda-basic,16,9.98387,9.10925,9.59823,14.7691,11.5785,13.3731
+scal-lss-nupar,cuda-basic,16,21679.8,21658.3,21667.3,22658,21876.8,22020.9
+scal-lss-nupar,cuda-basic,16,55.778,54.451,55.3315,80.7752,60.7268,66.4067
+scal-lss-nupar,cuda-basic,16,173078,172859,172953,193512,173809,175088
+scal-lss-nupar,cuda-basic,16,361.353,359.702,360.595,436.093,378.25,391.946
+scal-lss-nupar,cuda-basic,16,4483.24,4474.2,4477.78,4914.61,4533.62,4582.61
+scal-lss-nupar,cuda-basic,16,15.0479,14.2955,14.8023,19.9439,16.7664,18.607
+scal-lss-nupar,cuda-basic,16,35637.2,35588.3,35610.6,36678.4,35805.6,35941.4
+scal-lss-nupar,cuda-basic,16,89.7589,87.9239,88.7338,109.04,94.1882,97.9057
+scal-lss-nupar,cuda-basic,16,284488,284075,284231,303248,285198,286303
+scal-lss-nupar,cuda-basic,16,592.618,590.325,591.559,1704.82,608.73,673.192

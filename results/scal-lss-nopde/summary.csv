@@ -1,0 +1,13 @@
+Test,Code,block size,Max CPU Time,Min CPU Time,Avg CPU Time
+circle-in-1024,omp-original,16,1678.720966,1416.982980,1506.29
+circle-in-128,omp-original,16,44.995859,17.932681,39.4895
+circle-in-2048,omp-original,16,5531.323750,4842.839897,5198.32
+circle-in-256,omp-original,16,149.839483,116.772071,144.003
+circle-in-4096,omp-original,16,22200.214444,19379.429100,21288.1
+circle-in-512,omp-original,16,688.508874,267.416727,549.838
+circle-out-1024,omp-original,16,4831.877701,4555.044686,4712.14
+circle-out-128,omp-original,16,150.964364,119.357644,130.194
+circle-out-2048,omp-original,16,19286.646768,18503.886929,18782.9
+circle-out-256,omp-original,16,545.067756,231.686760,461.383
+circle-out-4096,omp-original,16,104246.379200,82705.137048,92712.1
+circle-out-512,omp-original,16,1516.597135,1072.871981,1289.62
